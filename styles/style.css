@@ -88,7 +88,7 @@ main .main-input-container:hover { /* en el momento que el cursor pasa por encim
      box-shadow: 0 1px 6px 0 #20212447;   /* generar sombra en el elemento */
      border-color: #dfe1e500;
 }
-main .main-input .serch-icon {
+main .main-input .search-icon {
      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png");
      background-repeat: no-repeat;
      background-position: center;
@@ -107,67 +107,51 @@ main .main-input .micro-icon {
 }
 main .main-buttons {
      width: 53rem;
-     margin: 0 auto;
+     margin: 0 auto;   /* para que se pocisione en el cnetro y se un poco mas flexible */
 }
 main .main-buttons div {
-     display:inline-flex;
+     display:inline-block;     /* para que un elemento se ponga en frente del otro */
 }
 main .main-buttons button {
      height: 3.6rem;
      background-color: #f2f2f2;
-     border: none;
+     border: 0;
      font-size: 1.4rem;
      color: #5f6368;
      border-radius: 0.5rem;
      padding: 0 1.5rem;
-     margin-right: 1rem;
+     margin-right: 1.5rem;        /* una separación de los elementos */
 }
 main .main-buttons button:hover {
-     background-color: #f8f8f8;
-     border: 0.1rem solid #c6c6c6;
-     box-shadow: 0 0.1rem 0.1rem rgba(0, ,0, 0, ,0.1)
-     color: #222;
+     border: 1px solid #c6c6c6;
+     box-shadow: 0 1px 1px #000001;
+
 }
 footer {
      width: 100%;
-     height: 8rem;
+     height: 5rem;
      position: absolute;
      bottom: 0;
      display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: 1fr 1fr;
+     grid-template-columns: 1fr 1fr;
      align-items: center;
      font-size: 1.3rem;
      background-color: #f2f2f2;
      border-top: 0.1rem solid #e4e4e4;
 }
-footer .footer-down {
-     display: grid;
-     grid-row-start: 2;
-     grid-template-columns: 1fr 1fr;
-     border-top: 0.1rem solid #e4e4e4;
-}
-footer ul {
+footer ul{
      margin: 1rem;
-     margin-right: 2rem;
-     list-style: none;
+     list-style:none;
      display: flex;
      padding-left: 0;
 }
 footer .footer-left {
      justify-self: left;
 }
+footer .footer-right {
+     justify-self: right;
+}
 footer ul li a {
-     margin: 2rem;
-     margin-right: 0.9rem;
-     color: #5f6368;
-     font-size: 1.4rem;
-}
-footer .footer-country {
-     grid-row-start: 1;
-}
-footer .footer-country span {
-     font-size: 1.4rem;
-     margin: 3rem;
+     margin: 1rem;
      color: #5f6368;
 }
